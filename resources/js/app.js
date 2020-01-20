@@ -9,6 +9,7 @@ require('./bootstrap');
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
+import {routes} from './routes';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
@@ -30,7 +31,7 @@ const router = new VueRouter({
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+let MainApp = Vue.component('main-app', require('./components/MainApp.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,5 +41,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    components:{
+        MainApp
+    }
 });
