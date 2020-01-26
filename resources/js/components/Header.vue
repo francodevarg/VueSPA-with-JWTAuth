@@ -8,12 +8,30 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
+                        <template v-if="!currentUser">
+                            <li>
+                                <router-link to="/Login" class="nav-link"> Login </router-link> 
+                            </li>
+                            <li>
+                                <router-link to="/register" class="nav-link"> Register </router-link> 
+                            </li>
+
+                        </template>
+
+                        <template v-else>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false"
+                                    aria-haspopup="true" data-toggle="dropdown" >
+                                    {{currentUser.name}}
+                                    <span class="caret"> </span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a href="#!" @click.prevent="logout" class="dropdown-item"> Logout</a>
+                                </div>
+
+                            </li>
+                            
+                        </template>
                     </ul>
                 </div>
             </div>
@@ -24,6 +42,19 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    methods:{
+        logout(){
+            this.$store.commit('logout');
+            this.$router.push('/login');
+        }
+
+    },
+    computed:{
+        currentUser(){
+            return this.$store.getters.currentUser;
+        }
+    }
+
 }
 </script>
