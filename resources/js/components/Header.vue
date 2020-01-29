@@ -19,13 +19,21 @@
                         </template>
 
                         <template v-else>
+
+                            <li>
+                                <router-link to="/customers" class="nav-link">Customers </router-link>
+                            </li>
+
+                               
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false"
                                     aria-haspopup="true" data-toggle="dropdown" >
                                     {{currentUser.name}}
                                     <span class="caret"> </span>
                                 </a>
+
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <router-link to="/" class="dropdown-item">Home </router-link>
                                     <a href="#!" @click.prevent="logout" class="dropdown-item"> Logout</a>
                                 </div>
 
