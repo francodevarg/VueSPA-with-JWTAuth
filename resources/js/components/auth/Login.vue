@@ -3,9 +3,9 @@
 
     <div class="login row">
         <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">
-                    Login
+            <div class="card shadow-sm">
+                <div class="h3 text-center pt-2">
+                    Iniciar Sesión
                 </div>
                 <div class="card-body">
                     <form @submit.prevent="authenticate">
@@ -14,11 +14,11 @@
                             <input type="email" v-model="form.email" class="form-control" placeholder="Ingrese su email">
                         </div>
                         <div class="form-group row">
-                            <label for="password">Password:</label>
+                            <label for="password">Contraseña:</label>
                             <input type="password" v-model="form.password" class="form-control" placeholder="Ingrese su contraseña">
                         </div>
                         <div class="form-group row">
-                            <input type="submit" value="Login">
+                            <input type="submit" value="Entrar" class="btn btn-primary btn-lg btn-block">
                         </div>
                         <div class="form-group row" v-if="authError">
                             <p class="error">

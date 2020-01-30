@@ -10,7 +10,7 @@
                     <ul class="navbar-nav ml-auto">
                         <template v-if="!currentUser">
                             <li>
-                                <router-link to="/Login" class="nav-link"> Login </router-link> 
+                                <router-link to="/Login" class="btn btn-outline-primary"> Iniciar Sesión </router-link> 
                             </li>
                             <li>
                                 <router-link to="/register" class="nav-link"> Register </router-link> 

@@ -38197,10 +38197,10 @@ var render = function() {
                             _c(
                               "router-link",
                               {
-                                staticClass: "nav-link",
+                                staticClass: "btn btn-outline-primary",
                                 attrs: { to: "/Login" }
                               },
-                              [_vm._v(" Login ")]
+                              [_vm._v(" Iniciar Sesión ")]
                             )
                           ],
                           1
@@ -38440,9 +38440,9 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "login row" }, [
       _c("div", { staticClass: "col-md-4" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v("\n                Login\n            ")
+        _c("div", { staticClass: "card shadow-sm" }, [
+          _c("div", { staticClass: "h3 text-center pt-2" }, [
+            _vm._v("\n                Iniciar Sesión\n            ")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
@@ -38485,7 +38485,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group row" }, [
                   _c("label", { attrs: { for: "password" } }, [
-                    _vm._v("Password:")
+                    _vm._v("Contraseña:")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -38541,7 +38541,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group row" }, [
-      _c("input", { attrs: { type: "submit", value: "Login" } })
+      _c("input", {
+        staticClass: "btn btn-primary btn-lg btn-block",
+        attrs: { type: "submit", value: "Entrar" }
+      })
     ])
   }
 ]
