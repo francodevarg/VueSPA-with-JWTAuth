@@ -1,5 +1,7 @@
 <template>
-    <div class="login row justify-content-center">
+    <div class="container">
+
+    <div class="login row">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -27,6 +29,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
@@ -74,6 +77,10 @@ export default {
 .error{
     text-align: center;
     color:red;
+}
+.login{
+    display:flex;
+    justify-content: center;
 }
 
 </style>
